@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedVitta: cuidado, saúde e atendimento médico em um só lugar.">
+    <title>MedVitta | Sua saúde em boas mãos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <a href="#inicio" class="logo" aria-label="MedVitta página inicial">
+                <span class="logo-icon">✚</span>
+                <span>Med<span class="logo-highlight">Vitta</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#especialidades">Especialidades</a>
+                <a href="#medicos">Nossos médicos</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#agendamento" class="nav-button">Agendar consulta</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="eyebrow">
+                        <span class="status-dot"></span>
+                        Cuidado que acompanha você
+                    </span>
+
+                    <h1>Sua saúde merece um cuidado <span>especial.</span></h1>
+
+                    <p>
+                        Na MedVitta, conectamos você a profissionais qualificados
+                        para tornar seu cuidado com a saúde mais simples e acolhedor.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#agendamento" class="button button-primary">
+                            Agendar consulta <span>↗</span>
+                        </a>
+                        <a href="#especialidades" class="button button-secondary">
+                            Conhecer especialidades
+                        </a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <div class="trust-icon">♡</div>
+                        <div>
+                            <strong>Cuidado em primeiro lugar</strong>
+                            <p>Uma experiência pensada para você.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=85"
+                            alt="Profissional médica sorrindo"
+                        >
+                        <div class="image-label">
+                            <span class="label-icon">✚</span>
+                            <div>
+                                <strong>MedVitta</strong>
+                                <small>Saúde com atenção e confiança</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="floating-card floating-card-top">
+                        <span class="floating-icon">♡</span>
+                        <div>
+                            <strong>Seu bem-estar</strong>
+                            <small>É nossa prioridade</small>
+                        </div>
+                    </div>
+
+                    <div class="floating-card floating-card-bottom">
+                        <span class="floating-icon">✓</span>
+                        <div>
+                            <strong>Atendimento organizado</strong>
+                            <small>Encontre sua especialidade</small>
+                        </div>
+                    </div>
+
+                    <div class="hero-decoration"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-search">
+            <div class="container search-panel">
+                <div class="search-heading">
+                    <span class="section-kicker">ENCONTRE SEU MÉDICO</span>
+                    <h2>Como podemos ajudar?</h2>
+                </div>
+
+                <div class="search-control">
+                    <span class="search-icon">⌕</span>
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Busque por médico ou especialidade..."
+                        aria-label="Buscar médico ou especialidade"
+                    >
+                    <a href="#medicos" class="button button-primary search-button">Buscar</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section specialties-section" id="especialidades">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">CUIDADO COMPLETO</span>
+                        <h2>Especialidades médicas</h2>
+                        <p>Encontre o atendimento ideal para cuidar da sua saúde.</p>
+                    </div>
+                    <a href="#medicos" class="text-link">Ver médicos <span>↗</span></a>
+                </div>
+
+                <div class="specialty-grid" id="specialty-grid">
+                    <!-- As especialidades serão inseridas pelo JavaScript. -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section doctors-section" id="medicos">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-kicker">NOSSA EQUIPE</span>
+                        <h2>Conheça nossos médicos</h2>
+                        <p>Profissionais de diferentes áreas para acompanhar você.</p>
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <label for="specialty-filter">Filtrar por especialidade:</label>
+                    <select id="specialty-filter">
+                        <option value="Todas">Todas as especialidades</option>
+                    </select>
+                </div>
+
+                <div class="doctor-grid" id="doctor-grid">
+                    <!-- Os médicos serão inseridos pelo JavaScript. -->
+                </div>
+
+                <p class="empty-message" id="empty-message" hidden>
+                    Nenhum médico encontrado. Tente outra busca ou especialidade.
+                </p>
+            </div>
+        </section>
+
+        <section class="about-section" id="sobre">
+            <div class="container about-content">
+                <div class="about-symbol">✚</div>
+
+                <div class="about-text">
+                    <span class="section-kicker">SOBRE A MEDVITTA</span>
+                    <h2>Mais praticidade para cuidar do que realmente importa.</h2>
+                    <p>
+                        A MedVitta é um projeto de site para facilitar a busca por
+                        especialidades e profissionais médicos. Nosso objetivo é
+                        oferecer uma navegação clara, moderna e simples de utilizar.
+                    </p>
+                </div>
+
+                <a href="#agendamento" class="button button-light">
+                    Encontrar atendimento <span>↗</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section appointment-section" id="agendamento">
+            <div class="container appointment-layout">
+                <div class="appointment-intro">
+                    <span class="section-kicker">PRÓXIMO PASSO</span>
+                    <h2>Vamos cuidar da sua saúde?</h2>
+                    <p>
+                        Preencha os dados abaixo para simular uma solicitação
+                        de agendamento.
+                    </p>
+
+                    <div class="appointment-note">
+                        <span>ⓘ</span>
+                        <p>
+                            Este formulário é demonstrativo. Ele não confirma
+                            consultas reais nem envia seus dados para uma clínica.
+                        </p>
+                    </div>
+                </div>
+
+                <form class="appointment-form" id="appointment-form">
+                    <h3>Solicitar agendamento</h3>
+                    <p class="form-subtitle">Preencha os campos para continuar.</p>
+
+                    <div class="form-grid">
+                        <div class="form-group form-full">
+                            <label for="patient-name">Nome completo</label>
+                            <input
+                                type="text"
+                                id="patient-name"
+                                name="patientName"
+                                placeholder="Digite seu nome completo"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group form-full">
+                            <label for="patient-email">E-mail</label>
+                            <input
+                                type="email"
+                                id="patient-email"
+                                name="patientEmail"
+                                placeholder="voce@exemplo.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointment-specialty">Especialidade</label>
+                            <select id="appointment-specialty" name="specialty" required>
+                                <option value="">Selecione</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointment-doctor">Médico</label>
+                            <select id="appointment-doctor" name="doctor" required disabled>
+                                <option value="">Selecione a especialidade primeiro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointment-date">Data desejada</label>
+                            <input type="date" id="appointment-date" name="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointment-period">Período preferido</label>
+                            <select id="appointment-period" name="period" required>
+                                <option value="">Selecione</option>
+                                <option value="Manhã">Manhã</option>
+                                <option value="Tarde">Tarde</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="button button-primary submit-button">
+                        Simular agendamento <span>↗</span>
+                    </button>
+
+                    <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-main">
+            <a href="#inicio" class="logo footer-logo">
+                <span class="logo-icon">✚</span>
+                <span>Med<span class="logo-highlight">Vitta</span></span>
+            </a>
+
+            <p>Cuidado, confiança e tecnologia a favor da saúde.</p>
+
+            <div class="footer-links">
+                <a href="#especialidades">Especialidades</a>
+                <a href="#medicos">Médicos</a>
+                <a href="#agendamento">Agendamento</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© <span id="current-year"></span> MedVitta. Projeto demonstrativo.</p>
+            <a href="#inicio">Voltar ao início ↑</a>
+        </div>
+    </footer>
+</body>
+</html>
