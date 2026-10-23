@@ -2,22 +2,22 @@
 const specialties = [
     {
         name: "Neurologia",
-        icon: "🧠",
+        icon: "◉",
         description: "Cuidados com o sistema nervoso"
     },
     {
         name: "Endocrinologia",
-        icon: "⚕",
+        icon: "✳",
         description: "Hormônios e metabolismo"
     },
     {
         name: "Neurocirurgia",
-        icon: "✚",
+        icon: "⌘",
         description: "Tratamento neurocirúrgico"
     },
     {
         name: "Traumatologia",
-        icon: "🦴",
+        icon: "✚",
         description: "Ossos, músculos e articulações"
     },
     {
@@ -27,7 +27,7 @@ const specialties = [
     },
     {
         name: "Cirurgia geral",
-        icon: "✚",
+        icon: "＋",
         description: "Avaliação e tratamento cirúrgico"
     },
     {
@@ -37,7 +37,7 @@ const specialties = [
     },
     {
         name: "Clínica geral",
-        icon: "＋",
+        icon: "⊕",
         description: "Cuidado integral com a saúde"
     }
 ];
